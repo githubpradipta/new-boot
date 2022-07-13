@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <style>
+    .sec {
+      color: black;
+    }
+
+    footer .nav-item a:hover {
+      color: rgb(0, 0, 0);
+    }
+
+    footer .nav-item a {
+      color: rgb(113, 113, 113);
+    }
+
+    .cards {
+      margin-top: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Prosite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Topics
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Food</a></li>
+                <li><a class="dropdown-item" href="#">Sports</a></li>
+                <li><a class="dropdown-item" href="#">Development</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/contact.html">Support</a></li>
+                <li><a class="dropdown-item" href="/contact.html">Contact</a></li>
+              </ul>
+            </li>
+            </li>
+            <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+
+          </ul>
+
+        <div class="mx-2">
+
+          <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+          <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login Here</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  Register modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register Yourself</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <div class="col-md-8">
+              <label for="inputEmail4" class="form-label">Name</label>
+              <input type="text" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-4">
+              <label for="inputEmail4" class="form-label">Age</label>
+              <input type="Number" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-12">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail4" placeholder="abc@Gmail.com">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>West Bengle</option>
+                <option>Punjab</option>
+                <option>Delhi</option>
+                <option>Himachal Pradesh</option>
+                <option>Uttar Pradesh</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Pincode</label>
+              <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-float">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="height: 70vh;">
+          <img src="/images/table.jpg" class="d-block w-100" alt="..." width="100%">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Wellcome to Daily Blogs</h2>
+            <p>Get meny types of blogs releted to technology, neature, others.</p>
+            <button type="button" class="btn btn-success" onclick="func()">Goto Blogs</button>
+
+          </div>
+        </div>
+        <div class="carousel-item" style="height: 70vh;">
+          <img src="/images/macbook.jpg" alt="..." width="100%" height="100%">
+          <div class="carousel-caption d-none d-md-block sec">
+            <h2>Wellcome to Tech Blogs</h2>
+            <p>Get meny types of blogs releted to technology, neature, others.</p>
+            <button type="button" class="btn btn-success" onclick="func()">Goto Blogs</button>
+
+          </div>
+        </div>
+        <div class="carousel-item" style="height: 70vh;">
+          <img src="/images/code.png" alt="..." width="100%" height="100%">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Wellcome to Development Blogs</h2>
+            <p>Get meny types of blogs releted to technology, neature, others.</p>
+            <button type="button" class="btn btn-success" onclick="func()">Goto Blogs</button>
+
+          </div>
+        </div>
+        <div class="carousel-item" style="height: 70vh;">
+          <img src="/images/mountain.jpg" alt="..." width="100%">
+          <div class="carousel-caption d-none d-md-block  ">
+            <h2>Wellcome to Traval Blogs</h2>
+            <p>Get meny types of blogs releted to technology, neature, others.</p>
+            <button type="button" class="btn btn-success" onclick="func()">Goto Blogs</button>
+
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="container cards" style="margin-top: 70px;">
+    <div class="row mb-2 ">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Technology</strong>
+            <h3 class="mb-0">Future of AI</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto"> We're already seeing artificial intelligence in our smart devices and we'll
+              continue to see its influence permeate deeper into many other industries for the foreseeable future
+              additional content.</p>
+            <a href="https://blogs.microsoft.com/ai/" class="stretched-link">Read Blog</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="../images/VR.jpg" class="bd-placeholder-img" width="300" height="100%" alt="">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-info">Daily Life</strong>
+            <h3 class="mb-0">Is it in Your Diet</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">Healthy diet · They are important sources of vitamins, minerals, dietary fibre, plant
+              protein and antioxidants.People with diets rich in vegetables and fruit. In nutrition, diet is the sum of
+              food consumed by a....</p>
+            <a href="#" class="stretched-link">Read Blog</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="../images/deit.jpg" class="bd-placeholder-img" width="300" height="100%" alt="">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-danger">Developments</strong>
+            <h3 class="mb-0">Coding Fundamentals</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">Computer Programming is a step by step process of designing and developing various sets
+              of computer programs to accomplish a specific computing.In this beginners guide to coding...</p>
+            <a href="#" class="stretched-link">Read Blog</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="../images/coding.jpg" class="bd-placeholder-img" width="300" height="100%" alt="">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Neture</strong>
+            <h3 class="mb-0">Last Warning for Earth</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">Global warming is the long-term warming of the planet's tempereture. Though this warming
+              trend has been going on for a long time, its pace has significantly increased in the last. As the human
+              population has increased...</p>
+            <a href="#" class="stretched-link">Read Blog</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="../images/global warming.jpg" class="bd-placeholder-img" width="300" height="100%" alt="">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="container-float bg-lite " style="margin-top: 153px;">
+    <footer class="py-3 mt-5">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="/index.html" class="nav-link px-2 ">Home</a></li>
+        <li class="nav-item"><a href="/about.html" class="nav-link px-2 ">Blogs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 ">FAQs</a></li>
+        <li class="nav-item"><a href="/about.html" id="about" class="nav-link px-2 ">About</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2022 Company, Inc</p>
+    </footer>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
